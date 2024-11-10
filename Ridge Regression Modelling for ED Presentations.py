@@ -11,11 +11,6 @@ from sklearn.linear_model import Ridge
 from sklearn.model_selection import cross_val_score
 import matplotlib.dates as mdates
 
-def get_RMSE_mean(model,x,y):
-    scores = cross_val_score(model, x, y, scoring ="neg_mean_squared_error", cv =10)
-    rmse_score = np.sqrt(-scores)
-    print(f"Mean RMSE: {rmse_score.mean()}")
-
 # read data
 data = pd.read_csv(data)
 
